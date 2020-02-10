@@ -7,9 +7,7 @@ curl -XPOST "http://localhost:5000/image-sync" -d '{"image_data": "<b64 encoded 
 It should return a response, content-type application/json:
 
 {
-
 "text": "<recognized text>"
-
 }
 
 POST /image and GET /image
@@ -26,9 +24,7 @@ curl -XPOST "http://localhost:5000/image"
 But instead, it should return a response, content-type application/json:
 
 {
-
 "task_id": "<task id>"
-
 }
 
 The task id can then be used to retrieve the OCR text with the GET /image:
@@ -38,17 +34,13 @@ curl -XGET "http://localhost:5000/image" -d '{"task_id": "<task id as received f
 and return a response, content-type application/json:
 
 {
-
 "task_id": "<recognized text>"
-
 }
 
 if the task is done, or:
 
 {
-
 "task_id": null,
-
 }
 
 In which case it is assumed the task is not finished yet.
