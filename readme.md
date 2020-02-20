@@ -1,4 +1,4 @@
-POST /image-sync
+# POST /image-sync
 
 Accept the image as a b64-encoded payload data:
 
@@ -10,7 +10,7 @@ It should return a response, content-type application/json:
 "text": "<recognized text>"
 }
 
-POST /image and GET /image
+# POST /image and GET /image
 
 The POST /image-sync API is actually not so good, because OCR may take
 some time, especially for large images. It is generally bad practices to have
@@ -45,7 +45,7 @@ if the task is done, or:
 
 In which case it is assumed the task is not finished yet.
 
-How to run the API?
+# How to run the API?
 
 Build the docker image using this command:
 
